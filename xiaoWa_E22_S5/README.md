@@ -12,6 +12,10 @@
 
 Радіо: 433.650 МГц / 62.5 кГц / SF8 / CR8.
 
+Основа — FakeSolar `main` `a7e4b929` (MeshCore `dev` `a4c66307`) з усіма її змінами: новий GPS-код (автовизначення швидкості UART, `gps period`, `gps firstfix`, захист від спуфінгу `gps guard` / `gps fence`), CLI `telemetry` і `time force`, телеметрія без висоти барометра (`TELEM_NO_ALTITUDE`, щоб MeshMonitor бачив INA3221). Команди описані в [FakeSolar/README.md](../FakeSolar/README.md).
+
+Після переходу зі старої прошивки старі ключі `sensor set gps_*` більше не діють; перевірте `gps` і `gps period` (за замовчуванням 1800 с) і за потреби задайте `gps period 30m`.
+
 ## Файли
 
 | Файл | Роль |
